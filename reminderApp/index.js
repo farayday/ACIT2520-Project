@@ -1,36 +1,34 @@
-// This is a test - Ray
 const express = require("express");
-const app = express();
 const path = require("path");
 const ejsLayouts = require("express-ejs-layouts");
 const reminderController = require("./controller/reminder_controller");
 const authController = require("./controller/auth_controller");
+const passport = require("passport");
+const session = require("express-session");
+const flash = require("express-flash");
 
-app.use(express.static(path.join(__dirname, "public")));
-
-app.use(express.urlencoded({ extended: false }));
+const app = express();
 
 app.use(ejsLayouts);
-
 app.set("view engine", "ejs");
 
-// Routes start here
-app.get("/reminders", reminderController.list);
-app.get("/reminder/new", reminderController.new);
-app.get("/reminder/:id", reminderController.listOne);
-app.get("/reminder/:id/edit", reminderController.edit);
-app.post("/reminder/", reminderController.create);
-// ⭐ Implement these two routes below!
-app.post("/reminder/update/:id", reminderController.update);
-app.post("/reminder/delete/:id", reminderController.delete);
+app.use(express.urlencoded({ extended: false }));
+app.use(flash());
+app.use(express.static(path.join(__dirname, "public")));
 
-// 👌 Ignore for now
-app.get("/register", authController.register);
-app.get("/login", authController.login);
-app.post("/register", authController.registerSubmit);
-app.post("/login", authController.loginSubmit);
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(passport.authenticate("session"));
 
-app.listen(3001, function () {
+app.use("/reminders", reminderController);
+app.use("/", authController);
+
+app.listen(3001, () => {
   console.log(
     "Server running. Visit: http://localhost:3001/reminders in your browser 🚀"
   );
