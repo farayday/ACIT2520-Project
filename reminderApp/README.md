@@ -36,7 +36,7 @@ I worked on the following tasks:
 April 18th
 
 1. Restructered database to json
-2. Added passport authentication with email and password
+2. Added passport authentication with email and password using tutorial from passport documentation
 
 Sarah Ortega:
 I worked on the following tasks:
