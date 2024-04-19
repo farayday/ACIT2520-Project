@@ -29,13 +29,14 @@ April 11th (Second Sprint Complete)
 Ray Liu:
 I worked on the following tasks:
 
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
+1. Watched starter code video 1
+2. Watched starter code video 2
+3. Watched starter code video 3
 
-I also needed to research on Youtube and Google the following things:
+April 18th
 
-1. <Insert Video or Link to thing you needed to research>
+1. Restructered database to json
+2. Added passport authentication with email and password
 
 Sarah Ortega:
 I worked on the following tasks:
