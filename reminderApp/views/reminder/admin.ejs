@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h1 class="mt-4">Admin</h1>
+    <p class="lead mb-3">Welcome <%= user.name %>
+    </p>
+    <a href="/auth/logout" class="btn btn-secondary">Logout</a>
+    <h2 class="mt-4">Sessions</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>User ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <% keys.forEach(session=> { %>
+            <tr>
+                <td>
+                    <%= session%>
+                </td>
+                <td>
+                    <%= sessions[session].passport.user %>
+                </td>
+                
+                <td>
+                    <form class="deleteForm "method="POST" action=<%= "/reminder/delete_session/" + session %>>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                      </form>
+                </td>
+            </tr>
+            <% }) %>
+
+</div>

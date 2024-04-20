@@ -54,14 +54,15 @@ router.get("/register", (req, res) => {
   res.render("auth/register");
 });
 
-router.post(
-  "/login",
-  passport.authenticate("local", {
+router.post("/login",passport.authenticate("local", {
     successRedirect: "/reminders",
     failureRedirect: "/login",
     failureFlash: true,
+    // struggled to get users with an admin role to redirect to the admin.ejs page
   })
+  
 );
+
 
 router.post("/register", (req, res) => {
   if (database.exists(req.body.email)) {
@@ -81,6 +82,7 @@ router.post("/register", (req, res) => {
       email: req.body.email,
       hash: hash.toString("base64"),
       salt: salt.toString("base64"),
+      role: "user",
       reminders: [],
     };
 

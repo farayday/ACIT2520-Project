@@ -1,1 +1,30 @@
-{}
+{
+  "mazda@miata.com": {
+    "email": "mazda@miata.com",
+    "hash": "cnxDXumzysKO0c8PpnkEU2wiawRuUVFPqTK+t3XXtCgoKnztj3Oa2FYxog5nPc2tbxiyc8OC6LBt2ax/Oyfi+w==",
+    "salt": "J5j6zhIsjNkjinugeTeubA==",
+    "role": "user",
+    "reminders": [
+      {
+        "id": 1,
+        "title": "Wash Miata",
+        "description": "Wash Miata at Lexus washing bay @ 5 Pm.",
+        "completed": false
+      }
+    ]
+  },
+  "toyota@tacoma.com": {
+    "email": "toyota@tacoma.com",
+    "hash": "vE+tXMxY2CNICKZFXysH+NQjqLrghmc1z9VXVnGzQO4OXlKwqp6T4M4i3WwgmWrUBhvb6ipSvrNFCAp1QZhrVg==",
+    "salt": "7fQ1mxNd/en/qTBA2bq9Hw==",
+    "role": "admin",
+    "reminders": [
+      {
+        "id": 1,
+        "title": "Wash Truck",
+        "description": "Bring Tacoma to Nissan Wash Bay",
+        "completed": false
+      }
+    ]
+  }
+}
