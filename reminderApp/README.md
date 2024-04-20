@@ -18,12 +18,6 @@ I also need to:
 
 1. Create function including the fs.writeFile code that saves database to the file system (to remove code redundancy)
 
-Sarah Ortega:
-I worked on the following tasks:
-
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
 
 April 11th (Second Sprint Complete)
 Ray Liu:
@@ -33,14 +27,14 @@ I worked on the following tasks:
 2. Watched starter code video 2
 3. Watched starter code video 3
 
-April 18th
+Sarah Ortega:
+1. Watched started code videos 1, 2, and 3.
 
+April 18th
+Ray Liu:
 1. Restructered database to json
 2. Added passport authentication with email and password using tutorial from passport documentation
 
 Sarah Ortega:
-I worked on the following tasks:
-
-1. <Insert Some Task Here> - This task is responsible for xyz functionality.
-2. <Insert Some Task Here> - This task is responsible for xyz functionality.
-3. <Insert Some Task Here> - This task is responsible for xyz functionality.
+1. Attempted integrating passport js auth, went with Ray's version of the code.
+2. Attempted to work on admin remote destroy code, unsuccessful.
